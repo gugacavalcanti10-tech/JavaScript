@@ -1,0 +1,69 @@
+PRIMEIRO CAPITULO:
+
+I. Um mecânismo dentro de JavaScript é o operador ternario, que serve como um substituto de if else,
+
+1. Como funciona?
+A estrutura é:
+condicao ? valorSeVerdadeiro : valorSeFalso;
+
+
+- ? → Verifica a condição que está à esquerda.
+- O valor entre ? e : → É escolhido se a condição for verdadeira.
+- O valor depois de : → É escolhido se a condição for falsa.
+
+exemplo: console.log(true ? 1 : 2);  // 1
+console.log(false ? 1 : 2); // 2
+
+-------------------------------------------------------------------------------------------------
+
+II. VALORES VAZIOS EM JAVASCRIPT:
+
+Valores vazios em JavaScript: null e undefined
+Em JavaScript, existem dois valores especiais utilizados para representar a ausência de um valor: null e undefined.
+
+Apesar de parecerem semelhantes, eles possuem significados diferentes.
+1. undefined — Valor não definido
+O undefined significa que uma variável não recebeu um valor.
+
+Por exemplo:
+let nome;
+
+console.log(nome);        // undefined
+console.log(typeof nome); // "undefined"
+
+
+Nesse exemplo, a variável nome foi declarada, mas nenhum valor foi atribuído a ela.
+
+É como criar uma caixa e não colocar nada dentro.
+2. null — Ausência intencional de valor
+O null é utilizado quando queremos indicar intencionalmente que uma variável não possui valor.
+let usuario = null;
+
+console.log(usuario);        // null
+console.log(typeof usuario); // "object"
+
+------------------------------------------------------------------------------------------------
+
+
+III. CONVERSÃO AUTOMATICA:
+
+Dentro de JavaScript existe um mecânismo que é capaz de mudar o tipo do valor, para poder se encaixar na operação feita. Segue o exemplo abaixo: 
+
+console.log( 8 * null )
+ // → 0 
+console.log( "5" - 1 )
+ // → 4 
+console.log( "5" + 1 )
+ // → 51 
+console.log( "five" * 2 )
+ // → NaN 
+console.log(false == 0 )
+ // → true
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+IV. CURTO DE OPERADORES LÓGICOS:
+
+O curto-circuito de operadores lógicos em JavaScript ocorre quando uma expressão pode ser resolvida sem a necessidade de avaliar todos os seus valores. O operador && retorna o primeiro valor se ele for falso (falsy), enquanto o operador || retorna o primeiro valor se ele for verdadeiro (truthy). Já o operador ?? retorna o segundo valor apenas quando o primeiro é null ou undefined. Esses operadores tornam o código mais eficiente, evitando avaliações desnecessárias, e podem retornar os próprios valores da expressão, não apenas true ou false.
