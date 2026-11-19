@@ -1,6 +1,40 @@
 # Capítulo 1 — Valores, tipos e operadores
 
-Este resumo reúne conceitos introdutórios de JavaScript: o operador ternário, valores vazios, conversão automática de tipos e curto-circuito de operadores lógicos.
+Este resumo reúne conceitos introdutórios de JavaScript: operadores de comparação e negação, o operador ternário, valores vazios, conversão automática de tipos e curto-circuito de operadores lógicos.
+
+## Comparação e negação
+
+Operadores de comparação produzem um valor booleano: `true` (verdadeiro) ou `false` (falso). Eles podem comparar números e resultados de expressões aritméticas:
+
+```js
+const num1 = 5;
+const num2 = 15;
+
+console.log(num1 > num2);      // false: 5 não é maior que 15
+console.log(num2 > num1);      // true: 15 é maior que 5
+console.log(num1 + 11 > num2); // true: 16 é maior que 15
+```
+
+Além de `>` (maior que) e `<` (menor que), existem `>=` (maior ou igual a) e `<=` (menor ou igual a). A igualdade também torna essas duas últimas comparações verdadeiras:
+
+```js
+console.log(5 >= 5); // true
+console.log(5 <= 5); // true
+console.log(4 >= 5); // false
+```
+
+O operador `==` compara valores permitindo conversão automática de tipos; `!=` verifica se os valores são diferentes, também permitindo conversão. O operador lógico `!` nega o resultado de uma expressão booleana:
+
+```js
+const num3 = 5;
+const num4 = 5;
+
+console.log(num3 == num4);    // true
+console.log(!(num3 == num4)); // false
+console.log(num3 != num4);    // false
+```
+
+Para comparar sem conversão automática de tipos, use `===` para igualdade e `!==` para desigualdade quando apropriado.
 
 ## Operador ternário
 
